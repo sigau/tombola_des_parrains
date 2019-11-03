@@ -5,9 +5,11 @@ Fait :
      creation de la case servant a recuperer les nom
      tirage au sort avec remise à l'aide de ramdom.sample()
      crée une liste avec les potenciels parrain
-     affiche une photo apres chaque entré
+     créer une liste des parrain deja tiré
+     affiche une photo apres chaque entrer
+     
 A faire:
   
   faire passer la case au dessus du fond
-  recuperer les photos
-  assembler les deux scripts
+  recuperer les photos des parrains
+
