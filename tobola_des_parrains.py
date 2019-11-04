@@ -87,7 +87,9 @@ while not done :
 					name = name[:-1]
 				else: 
 					name += event.unicode 
-	
+
+
+###tenter de remplacer fenetre par fond 
 fenetre.fill((30, 30, 30))
 # fait apparaitre le texte.
 txt_surface = font.render(name, True, color)
