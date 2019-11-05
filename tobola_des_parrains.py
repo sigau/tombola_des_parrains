@@ -42,8 +42,8 @@ font=pg.font.Font(None,32)
 
 #mise en place de la name_box
 input_box = pg.Rect(00, 00, 140, 32)
-color_inactive = pg.Color('lightskyblue3')
-color_active = pg.Color('dodgerblue2')
+color_inactive = pg.Color(220, 20, 60)
+color_active = pg.Color(255, 20, 147)
 active = False
 name = ''
 done = False
