@@ -36,8 +36,8 @@ fenetre = pg.display.set_mode((1920,1080), RESIZABLE)
 clock = pg.time.Clock()
 
 #mise en place du background
-fond = pg.image.load("background.png").convert()
-fenetre.blit(fond, (0,0))
+#fond = pg.image.load("background.png").convert()
+#fenetre.blit(fond, (0,0))
 font=pg.font.Font(None,32)
 
 #mise en place de la name_box
