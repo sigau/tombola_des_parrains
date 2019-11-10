@@ -20,7 +20,7 @@ parrain_tire=[]
 
 def main():
     screen = pg.display.set_mode((1920, 1080),RESIZABLE)
-    pg.display.set_caption("Prog de depannage si personne n'a bosser dessus !")
+    pg.display.set_caption("Prog de depannage si personne n'a bosser dessus. Nan parce que en vrai sinon quelqu'un aurait changer le nom!")
     font = pg.font.Font(None, 32)
     police = pg.font.Font("/home/gautier/Bureau/tombola_des_parrains/Storyboo.TTF",72)
     texte = police.render("Soiree parrainage BCD 2019",True,pg.Color("lightskyblue3"))
@@ -28,13 +28,23 @@ def main():
     rectTexte = texte.get_rect()
     rectTexte.center = rectScreen.center
     clock = pg.time.Clock()
-    input_box = pg.Rect(800, 600, 140, 32)
+    input_box = pg.Rect(820, 600, 140, 32)
     color_inactive = pg.Color('lightskyblue3')
     color_active = pg.Color('dodgerblue2')
     color = color_inactive
     active = False
     text = ''
     done = False
+    logo_BCD = pg.image.load("/home/gautier/Bureau/tombola_des_parrains/Logo_BCD.png").convert_alpha()
+    small_bcd=pg.transform.scale(logo_BCD, (364, 364)) 
+    position_BCD=(750,50)
+    logo_IDS = pg.image.load("/home/gautier/Bureau/tombola_des_parrains/Logo_IDS_Negatif.png").convert_alpha()
+    small_ids=pg.transform.scale(logo_IDS, (283, 273)) 
+    position_IDS=(400,150)
+    logo_phymed = pg.image.load("/home/gautier/Bureau/tombola_des_parrains/Logo_Phymed_negatif.png").convert_alpha()
+    small_phymed=pg.transform.scale(logo_phymed, (273, 273)) 
+    position_phymed=(1200,150)
+
 
 
     while not done:
@@ -125,6 +135,12 @@ def main():
         pg.draw.rect(screen, color, input_box, 2)
 
         screen.blit(texte,rectTexte)
+        screen.blit(small_bcd,position_BCD)
+        screen.blit(small_ids,position_IDS)
+        screen.blit(small_phymed,position_phymed)
+
+
+
 
         pg.display.flip()
         
