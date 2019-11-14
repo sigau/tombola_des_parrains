@@ -7,14 +7,17 @@ import random , sys , re , os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+
+var_local=str(os.getcwd())
+
 #recupere les noms des photos
-dir ="/home/gautier/Bureau/photo_bcd"
+dir =var_local+"/photo_bcd"
 liste_parrain=os.listdir(dir)
 
 #liste a remplir pour pas tirer 2 fois un parrain 
 parrain_tire=[]
 
-img = mpimg.imread("/home/gautier/Bureau/parrain/background.jpg")
+img = mpimg.imread(var_local+"/background.jpg")
 
 
 #remplissage de la liste des parrain avec le fichier
@@ -77,7 +80,7 @@ while not done :
 						print(t)
 						photo= re.search("((\w).*(\w))",str(t))
 						if photo :
-							img= mpimg.imread("/home/gautier/Bureau/photo_bcd/"+str(photo.group(1)))
+							img= mpimg.imread(var_local+"/photo_bcd/"+str(photo.group(1)))
 						plt.imshow(img)
 						plt.show()
 						

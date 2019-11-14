@@ -7,11 +7,14 @@ import random , sys , re , os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+#recupere le working directory
+var_local=str(os.getcwd())
 #recupere les noms des photos
-dir ="/home/gautier/Bureau/photo_bcd"
-dirIDS ="/home/gautier/Bureau/photo_ids"
-dirPhymed="/home/gautier/Bureau/photo_phymed"
-liste_parrain=os.listdir(dir)
+
+dirBCD =var_local+"/photo_bcd/"
+dirIDS =var_local+"/photo_ids/"
+dirPhymed=var_local+"/photo_phymed/"
+liste_parrain=os.listdir(dirBCD)
 liste_parrain_ids=os.listdir(dirIDS)
 liste_parrain_phymed=os.listdir(dirPhymed)
 
@@ -20,9 +23,9 @@ parrain_tire=[]
 
 def main():
     screen = pg.display.set_mode((1920, 1080),RESIZABLE)
-    pg.display.set_caption("Prog de depannage si personne n'a bosser dessus. Nan parce que en vrai sinon quelqu'un aurait changer le nom!")
+    pg.display.set_caption("Prog de dépannage si personne n'a bossé dessus. Nan parce que en vrai sinon quelqu'un aurait changé le nom!")
     font = pg.font.Font(None, 32)
-    police = pg.font.Font("/home/gautier/Bureau/tombola_des_parrains/Storyboo.TTF",72)
+    police = pg.font.Font(var_local+"/Storyboo.TTF",72)
     texte = police.render("Soiree parrainage BCD 2019",True,pg.Color("lightskyblue3"))
     rectScreen = screen.get_rect()
     rectTexte = texte.get_rect()
@@ -35,16 +38,18 @@ def main():
     active = False
     text = ''
     done = False
-    logo_BCD = pg.image.load("/home/gautier/Bureau/tombola_des_parrains/Logo_BCD.png").convert_alpha()
+    logo_BCD = pg.image.load(var_local+"/Logo_BCD.png").convert_alpha()
     small_bcd=pg.transform.scale(logo_BCD, (364, 364)) 
     position_BCD=(750,50)
-    logo_IDS = pg.image.load("/home/gautier/Bureau/tombola_des_parrains/Logo_IDS_Negatif.png").convert_alpha()
+    logo_IDS = pg.image.load(var_local+"/Logo_IDS_Negatif.png").convert_alpha()
     small_ids=pg.transform.scale(logo_IDS, (283, 273)) 
     position_IDS=(400,150)
-    logo_phymed = pg.image.load("/home/gautier/Bureau/tombola_des_parrains/Logo_Phymed_negatif.png").convert_alpha()
+    logo_phymed = pg.image.load(var_local+"/Logo_Phymed_negatif.png").convert_alpha()
     small_phymed=pg.transform.scale(logo_phymed, (273, 273)) 
     position_phymed=(1200,150)
-
+    bordeline_joke=pg.image.load(var_local+"/Capture du 2019-11-10 21-06-52.png").convert_alpha()
+    small_bordeline_joke=pg.transform.scale(bordeline_joke, (630,262))
+    position_borderline=(600,700)
 
 
     while not done:
@@ -79,7 +84,7 @@ def main():
                                 print(t)
                                 photo=re.search("((\w).*(\w))",str(t))
                                 if photo :
-                                    img=mpimg.imread("/home/gautier/Bureau/photo_bcd/"+str(photo.group(1)))
+                                    img=mpimg.imread(dirBCD+str(photo.group(1)))
                                 plt.imshow(img)
                                 plt.show()
 
@@ -96,7 +101,7 @@ def main():
                                 print(t)
                                 photo=re.search("((\w).*(\w))",str(t))
                                 if photo :
-                                    img=mpimg.imread("/home/gautier/Bureau/photo_ids/"+str(photo.group(1)))
+                                    img=mpimg.imread(dirIDS+str(photo.group(1)))
                                 plt.imshow(img)
                                 plt.show()
                             
@@ -113,7 +118,7 @@ def main():
                                 print(t)
                                 photo=re.search("((\w).*(\w))",str(t))
                                 if photo :
-                                    img=mpimg.imread("/home/gautier/Bureau/photo_phymed/"+str(photo.group(1)))
+                                    img=mpimg.imread(dirPhymed+str(photo.group(1)))
                                 plt.imshow(img)
                                 plt.show()
 
@@ -138,6 +143,7 @@ def main():
         screen.blit(small_bcd,position_BCD)
         screen.blit(small_ids,position_IDS)
         screen.blit(small_phymed,position_phymed)
+        screen.blit(small_bordeline_joke,position_borderline)
 
 
 
