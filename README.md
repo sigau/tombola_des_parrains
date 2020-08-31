@@ -16,11 +16,11 @@ le secret de la programmaaaaaaaatttiiiiiioooooooooooooonnnnnn
 Programaaaaatttiiiooonnnnn ! codez les tous !
 
 
-
+#
 
 Python , Java et C++, cet homme avait ammassé toutes les languages du monde. Son nom Gautier "Gotgot" Debaecker, roi des pirates. Ses dernières paroles insitèrent les etudiants de toute l'association à s'aventurer sur git ! <<Mon code ? Je vous le laisse si vous voulez TROUVER LE ! je l'ai laissé quelque part dans ce README.>> Tous se lancèrent que la route de son repertory dans l'espoir de mettre la main sue ce fameux  trésor le master entier connut alors une grande vague de conneries !"
 
-
+#
 
 Il y a presque six mois
 De cours cette année
@@ -44,7 +44,7 @@ Si vous rejoignez l'asso astico on va bien s'amuser !
 (Alban ! Gautier à fait le code de la soirée 
 !) 
 
-
+#
 
 
 J'ai plus d'idée 
