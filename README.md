@@ -1,9 +1,9 @@
 # toombola_des_parrains
 
-#Pour réaliser le tirage entrer la promo + prenom du M1 
-# ex : BCD Gautier ou bcd Gautier
+## Pour réaliser le tirage entrer la promo + prenom du M1 
+## ex : BCD Gautier ou bcd Gautier
 
-
+# 
 Un jour je serais le meilleur codeur,
 je commenterai tout mes scripts,
 je ferai tout pour ne plus avoir d'erreurs,
@@ -49,12 +49,12 @@ Si vous rejoignez l'asso astico on va bien s'amuser !
 
 J'ai plus d'idée 
 
-#Pour réaliser le tirage entrer la promo + prenom du M1 
-# ex : BCD Gautier ou bcd Gautier
+Pour réaliser le tirage entrer la promo + prenom du M1 
+ ex : BCD Gautier ou bcd Gautier
 
 
 
-##Fait :
+## Fait :
      mise en place du fond
      creation de la case servant a recuperer les nom
      tirage au sort avec remise à l'aide de ramdom.sample()
@@ -64,7 +64,7 @@ J'ai plus d'idée
       faire passer la case au dessus du fond
       recuperer les photos des parrains
      
-##A faire:
+## A faire:
   
   La soirée
 
