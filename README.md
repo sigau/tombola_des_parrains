@@ -1,5 +1,5 @@
 # toombola_des_parrains
-
+# lancer proto_prog.py
 ## Pour réaliser le tirage entrer la promo + prenom du M1 
 ## ex : BCD Gautier ou bcd Gautier
 
