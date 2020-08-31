@@ -82,6 +82,7 @@ def main():
                                 parrain_tire.append(t)
                                 
                                 print(t)
+                                print(f"{text} devra faire un cadeau à {t}")
                                 photo=re.search("((\w).*(\w))",str(t))
                                 if photo :
                                     img=mpimg.imread(dirBCD+str(photo.group(1)))
@@ -99,6 +100,7 @@ def main():
                                 parrain_tire.append(t)
                                     
                                 print(t)
+                                print(f"{text} devra faire un cadeau à {t}")
                                 photo=re.search("((\w).*(\w))",str(t))
                                 if photo :
                                     img=mpimg.imread(dirIDS+str(photo.group(1)))
@@ -116,6 +118,7 @@ def main():
                                 parrain_tire.append(t)
                                     
                                 print(t)
+                                print(f"{text} devra faire un cadeau à {t}")
                                 photo=re.search("((\w).*(\w))",str(t))
                                 if photo :
                                     img=mpimg.imread(dirPhymed+str(photo.group(1)))
